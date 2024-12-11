@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUBE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="startScreen" class="start-screen">
+        <h1 class="game-title">CUBE</h1>
+        <button id="startButton" class="neon-button">START</button>
+    </div>
+
+    <div id="gameContainer" class="game-container hidden">
+        <div id="timer" class="timer hidden">15</div>
+        <button id="pauseButton" class="pause-button">❚❚</button>
+        <div id="court" class="court">
+            <!-- Players will be generated via JavaScript -->
+        </div>
+        
+        <div id="cube" class="cube"></div>
+        
+        <div id="controls" class="controls">
+            <div class="control-section">
+                <h3>Player 1 (Blue)</h3>
+                <p>Movement: WASD</p>
+                <p>Squares: 1-5</p>
+                <p>Grab/Steal: C</p>
+            </div>
+            <div class="control-section">
+                <h3>Player 2 (Pink)</h3>
+                <p>Movement: Arrow Keys</p>
+                <p>Squares: 6-0</p>
+                <p>Grab/Steal: M</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="winScreen" class="win-screen hidden">
+        <h2 id="winMessage" class="win-message"></h2>
+        <button id="playAgainButton" class="neon-button">PLAY AGAIN</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
