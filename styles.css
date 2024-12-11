@@ -1,0 +1,149 @@
+/* styles.css */
+:root {
+    --player1-color: #00ffff;
+    --player2-color: #ff69b4;
+    --cube-color: #ffffff;
+    --neon-glow: 0 0 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.game-container {
+    position: relative;
+    width: 1000px;
+    height: 600px;
+}
+
+.court {
+    width: 100%;
+    height: 80%;
+    border: 2px solid #333;
+    position: relative;
+    background: linear-gradient(to right, 
+        rgba(0, 255, 255, 0.1) 0%, 
+        rgba(0, 255, 255, 0.1) 49%, 
+        rgba(255, 105, 180, 0.1) 51%, 
+        rgba(255, 105, 180, 0.1) 100%
+    );
+}
+
+.player {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    transition: all 0.1s ease;
+}
+
+.player1 {
+    background-color: var(--player1-color);
+    box-shadow: var(--neon-glow) var(--player1-color);
+}
+
+.player2 {
+    background-color: var(--player2-color);
+    box-shadow: var(--neon-glow) var(--player2-color);
+}
+
+.cube {
+    width: 30px;
+    height: 30px;
+    background-color: var(--cube-color);
+    position: absolute;
+    box-shadow: var(--neon-glow) var(--cube-color);
+    transition: all 0.3s ease;
+}
+
+.timer {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    color: #fff;
+    text-shadow: var(--neon-glow) var(--cube-color);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.control-section {
+    text-align: center;
+}
+
+.neon-button {
+    background: transparent;
+    border: 2px solid var(--cube-color);
+    color: var(--cube-color);
+    padding: 15px 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: var(--neon-glow) var(--cube-color);
+    box-shadow: var(--neon-glow) var(--cube-color);
+}
+
+.neon-button:hover {
+    background-color: var(--cube-color);
+    color: #000;
+}
+
+.start-screen {
+    text-align: center;
+}
+
+.game-title {
+    font-size: 72px;
+    margin-bottom: 40px;
+    color: var(--cube-color);
+    text-shadow: var(--neon-glow) var(--cube-color);
+}
+
+.win-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.win-message {
+    font-size: 48px;
+    margin-bottom: 30px;
+    text-shadow: var(--neon-glow) var(--cube-color);
+}
+
+.pause-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: var(--cube-color);
+    font-size: 24px;
+    cursor: pointer;
+    text-shadow: var(--neon-glow) var(--cube-color);
+}
